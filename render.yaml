@@ -1,0 +1,5 @@
+services:
+  - type: static
+    name: konnectimpact-frontend
+    buildCommand: cd konnectimpact-staging && npm install && npm run build
+    publishDir: konnectimpact-staging/dist
