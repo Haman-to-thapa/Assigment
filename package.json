@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "echo 'Building frontend...' && cd konnectimpact-staging && npm install && npm run build",
-    "start": "echo 'Starting frontend...' && cd konnectimpact-staging && npm start"
+    "build": "cd konnectimpact-staging && npm install && npm run build && cd .. && node -e \"const fs=require('fs'); const path=require('path'); if(fs.existsSync('./dist')) fs.rmSync('./dist', {recursive:true}); fs.cpSync('./konnectimpact-staging/dist', './dist', {recursive:true});\"",
+    "start": "echo 'Starting frontend...' && cd konnectimpact-staging && npm start",
+    "postbuild": "echo 'Build completed. Dist folder created at root level.'"
   },
   "keywords": ["react", "frontend", "konnectimpact"],
   "author": "",
