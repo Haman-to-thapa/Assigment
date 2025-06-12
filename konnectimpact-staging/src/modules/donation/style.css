@@ -1,0 +1,188 @@
+/* ===== Brand Guidelines Implementation ===== */
+:root {
+  --teal-primary: #00897b;
+  --teal-dark: #00796b;
+  --lime-accent: #cddc39;
+  --gray-light: #f5f5f5;
+  --gray-medium: #e0e0e0;
+  --white: #ffffff;
+}
+
+/* ===== Base Styles ===== */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--gray-light);
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+.impact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== Typography ===== */
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--teal-primary);
+}
+
+h1 {
+  font-size: 28px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* ===== Card & Form Styles ===== */
+.impact-card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.impact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--teal-dark);
+}
+
+.form-group select,
+.form-group input {
+  padding: 12px 15px;
+  border: 1px solid var(--gray-medium);
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+  outline: none;
+  border-color: var(--teal-primary);
+  box-shadow: 0 0 0 2px rgba(0, 137, 123, 0.2);
+}
+
+/* ===== Points Meter ===== */
+.points-meter {
+  margin: 15px 0;
+}
+
+.meter-track {
+  height: 8px;
+  background-color: var(--gray-medium);
+  border-radius: 4px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.meter-progress {
+  height: 100%;
+  background-color: var(--lime-accent);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.points-meter span {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ===== Buttons ===== */
+.impact-btn {
+  padding: 14px 20px;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.impact-btn-primary {
+  background-color: var(--teal-primary);
+  color: white;
+}
+
+.impact-btn-primary:hover {
+  background-color: var(--teal-dark);
+}
+
+/* ===== Messages ===== */
+.impact-message {
+  padding: 15px;
+  border-radius: 4px;
+  margin: 20px 0;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.impact-message-success {
+  background-color: rgba(0, 137, 123, 0.1);
+  color: var(--teal-primary);
+  border: 1px solid rgba(0, 137, 123, 0.3);
+}
+
+.impact-message-error {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+.impact-message-hidden {
+  display: none;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Footer ===== */
+.impact-footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 600px) {
+  .impact-container {
+    padding: 15px;
+  }
+
+  .impact-card {
+    padding: 20px;
+  }
+}

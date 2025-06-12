@@ -1,0 +1,16 @@
+{
+  "name": "konnectimpact-frontend-deploy",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'Building frontend...' && cd konnectimpact-staging && npm install && npm run build",
+    "start": "echo 'Starting frontend...' && cd konnectimpact-staging && npm start"
+  },
+  "keywords": ["react", "frontend", "konnectimpact"],
+  "author": "",
+  "license": "ISC",
+  "description": "KonnectImpact Frontend Application",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
